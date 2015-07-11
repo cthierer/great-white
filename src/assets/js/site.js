@@ -1,7 +1,25 @@
-require(['editor/content_editor', 'editor/article'], function (ContentEditor, Article) {
+require(['editor/content_editor', 'editor/article', 'content/content_retriever', 'config/config', 'session/session'], function (ContentEditor, Article, ContentRetriever, Config, Session) {
 
-    $('article').click(function () {
-        var article = new Article(this),
-            editor = new ContentEditor(article, {});
+    function load () {
+        return Config.get('projects').then(function (projects) {
+            var selectedProject = projects[0];
+
+            return Session.set('project', selectedProject).then(function () {
+                return true;
+            });
+        });
+    }
+
+    load().then(function () {
+        $('article').click(function () {
+            var article = new Article(this, 'lorem-ipsum'),
+                editor = new ContentEditor(article, {
+                    contentRetriever: ContentRetriever
+                });
+
+            editor.getSourceContent().then(function (result) {
+                console.log(result);
+            });
+        });
     });
 });

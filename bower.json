@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "lodash": "~3.10.0"
+    "lodash": "~3.10.0",
+    "bluebird": "~2.9.33",
+    "qwest": "~1.7.0"
   },
   "private": true
 }

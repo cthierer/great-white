@@ -32,6 +32,33 @@ define(['./lodash.js'], function (_) {
             }
 
             return value;
+        },
+        set: function (object, path, value) {
+            var i = 0,
+                ref = object,
+                parts,
+                lastPart;
+
+            if (!_.isObject(object) || !_.isString(path)) {
+                return object;
+            }
+
+            parts = path.split('.');
+            lastPart = parts[parts.length - 1];
+
+            while (i < parts.length - 1) {
+                var part = parts[i++];
+
+                if (!_.has(ref, part)) {
+                    ref[part] = {};
+                }
+
+                ref = ref[part];
+            }
+
+            ref[lastPart] = value;
+
+            return object;
         }
     };
 });

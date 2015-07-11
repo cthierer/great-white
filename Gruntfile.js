@@ -96,6 +96,18 @@ module.exports = function(grunt) {
         src: 'lodash.min.js',
         dest: '<%= config.dist %>/assets/js'
       },
+      bluebird: {
+          expand: true,
+          cwd: 'bower_components/bluebird/js/browser/',
+          src: 'bluebird.min.js',
+          dest: '<%= config.dist %>/assets/js'
+      },
+      qwest: {
+          expand: true,
+          cwd: 'bower_components/qwest/',
+          src: 'qwest.min.js',
+          dest: '<%= config.dist %>/assets/js'
+      },
       css: {
         expand: true,
         cwd: 'src/assets/css',

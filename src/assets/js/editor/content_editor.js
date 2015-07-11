@@ -18,11 +18,18 @@ define(['/assets/js/logger/logger.js', '/assets/js/utils/objects.js', '/assets/j
 
         this.getOption = function (option) {
             return ObjectUtil.get(this.getOptions(), option);
+        };
+
+        this.getContentRetriever = function () {
+            return this.getOption('contentRetriever');
         }
     };
 
     ContentEditor.prototype.getSourceContent = function () {
-
+        var page = this.getArticle().getFileName(),
+            contentRetriever = this.getContentRetriever();
+            
+        return contentRetriever.getPageContent(page);
     };
 
     return ContentEditor;
