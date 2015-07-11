@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
     watch: {
       assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        files: ['<%= config.src %>/{content,data,templates,pages}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
       livereload: {
@@ -75,7 +75,10 @@ module.exports = function(grunt) {
           plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap','assemble-contrib-toc'],
         },
         files: {
-          '<%= config.dist %>/': ['<%= config.src %>/content/*.md']
+          '<%= config.dist %>/': [
+              '<%= config.src %>/pages/*.hbs',
+              '<%= config.src %>/content/*.md'
+          ]
         }
       }
     },
