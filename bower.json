@@ -2,7 +2,8 @@
   "name": "baracuda",
   "version": "0.1.0",
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "lodash": "~3.10.0"
   },
   "private": true
 }

@@ -39,9 +39,9 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= config.dist %>/{,*/}*.html',
-          '<%= config.dist %>/assets/{,*/}*.css',
-          '<%= config.dist %>/assets/{,*/}*.js',
-          '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= config.dist %>/assets/**/*.css',
+          '<%= config.dist %>/assets/**/*.js',
+          '<%= config.dist %>/assets/**/*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -89,6 +89,12 @@ module.exports = function(grunt) {
         cwd: 'bower_components/bootstrap/dist/',
         src: '**',
         dest: '<%= config.dist %>/assets/'
+      },
+      lodash: {
+        expand: true,
+        cwd: 'bower_components/lodash/',
+        src: 'lodash.min.js',
+        dest: '<%= config.dist %>/assets/js'
       },
       css: {
         expand: true,

@@ -17,6 +17,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="{{assets}}/js/bootstrap.min.js"></script>
+
+        <!-- require.js -->
+        <script data-main="{{assets}}/js/site" src="{{assets}}/js/require.js"></script>
     </head>
     <body>
         <div class="container">
@@ -26,14 +35,5 @@
                 {{> body }}
             </div>
         </div>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-
-        <!-- Bootstrap -->
-        <script src="{{assets}}/js/bootstrap.min.js"></script>
-
-        <!-- Custom site scripts -->
-        <script src="{{assets}}/js/site.js"></script>
     </body>
 </html>
