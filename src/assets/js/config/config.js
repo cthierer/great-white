@@ -7,7 +7,11 @@ define(['/assets/js/utils/lodash.js', '/assets/js/utils/objects.js', '/assets/js
 
         this.get = function (property) {
             var deferred = Promise.pending();
-            deferred.resolve(ObjectUtil.get(data, property));
+            if (property) {
+                deferred.resolve(ObjectUtil.get(data, property));
+            } else {
+                deferred.resolve(data);
+            }
             return deferred.promise;
         };
 
@@ -30,6 +34,9 @@ define(['/assets/js/utils/lodash.js', '/assets/js/utils/objects.js', '/assets/js
                 "name": "great-white",
                 "title": "GreatWhite"
             }
-        ]
+        ],
+        "content": {
+            "selectors": ["article", ".article", ".editable"]
+        }
     });
 })

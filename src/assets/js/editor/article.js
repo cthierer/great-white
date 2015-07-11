@@ -1,6 +1,6 @@
 
 define(function () {
-    var Article = function (element, fileName) {
+    var Article = function (element) {
         if (element instanceof jQuery) {
             element = element.get();
         }
@@ -9,8 +9,12 @@ define(function () {
             return element;
         };
 
+        this.getDataAttribute = function (name) {
+            return this.getElement().dataset[name];
+        };
+
         this.getFileName = function () {
-            return fileName;
+            return this.getDataAttribute('file');
         };
     };
 
