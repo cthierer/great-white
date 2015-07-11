@@ -1,7 +1,7 @@
 ---
 title: Lorem ipsum
 published: true
-template: default.hbs
+layout: article.hbs
 ---
 
 # Lorem ipsum
