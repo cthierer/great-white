@@ -1,18 +1,17 @@
 {
-  "name": "baracuda",
-  "description": "The best project ever..",
-  "version": "0.1.0",
-  "homepage": "https://github.com/cthierer1/baracuda",
+  "name": "great-white",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cthierer/great-white",
   "author": {
     "name": "Chris Thierer",
-    "url": "http://github.com/cthierer1/"
+    "url": "http://github.com/cthierer/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cthierer1/baracuda.git"
+    "url": "git://github.com/cthierer/great-white.git"
   },
   "bugs": {
-    "url": "https://github.com/cthierer1/baracuda/issues"
+    "url": "https://github.com/cthierer1/great-white/issues"
   },
   "engines": {
     "node": ">=0.10"
@@ -36,7 +35,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/cthierer1/baracuda/blob/master/LICENSE-MIT"
+      "url": "https://github.com/cthierer1/great-white/blob/master/LICENSE-MIT"
     }
   ],
   "keywords": [

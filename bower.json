@@ -1,6 +1,6 @@
 {
-  "name": "baracuda",
-  "version": "0.1.0",
+  "name": "great-white",
+  "version": "0.0.1",
   "dependencies": {
     "bootstrap": "~3.2.0",
     "lodash": "~3.10.0"
