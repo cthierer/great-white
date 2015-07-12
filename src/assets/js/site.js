@@ -1,4 +1,4 @@
-require(['logger/logger', 'editor/content_editor', 'editor/article', 'content/dummy_content_retriever', 'config/config', 'session/session'], function (Logger, ContentEditor, Article, ContentRetriever, Config, Session) {
+require(['logger/logger', 'utils/lodash', 'editor/content_editor', 'editor/article', 'content/dummy_content_retriever', 'config/config', 'session/session', 'styles/styles'], function (Logger, _, ContentEditor, Article, ContentRetriever, Config, Session, Styles) {
     var SiteLogger = Logger.get('site');
 
     function load () {
@@ -10,11 +10,18 @@ require(['logger/logger', 'editor/content_editor', 'editor/article', 'content/du
     }
 
     load().then(function (config) {
-        var editables = config.content.selectors.join(',');
+        var editableSelectors = config.content.selectors.join(','),
+            editables = $(editableSelectors);
 
-        SiteLogger.debug('Editable region selectors:', editables);
+        SiteLogger.debug('Editable region selectors:', editableSelectors);
 
-        $(editables).click(function () {
+        _.each(config.styles.stylesheets, function (stylesheet) {
+            Styles.loadStylesheet(stylesheet);
+        });
+
+        editables.addClass(config.styles.classes.editable);
+
+        editables.click(function () {
             var article = new Article(this),
                 editor = new ContentEditor(article, {
                     contentRetriever: ContentRetriever

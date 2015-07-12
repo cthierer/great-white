@@ -37,6 +37,12 @@ define(['/assets/js/utils/lodash.js', '/assets/js/utils/objects.js', '/assets/js
         ],
         "content": {
             "selectors": ["article", ".article", ".editable"]
+        },
+        "styles": {
+            "stylesheets": ["/assets/js/styles/gw-styles.css"],
+            "classes": {
+                "editable": "gw-editable"
+            }
         }
     });
 })
