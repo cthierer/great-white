@@ -11,21 +11,18 @@
         <!-- Custom site styles -->
         <link href="{{assets}}/css/site.css" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://code.jquery.com/jquery.js"></script>
 
         <!-- Bootstrap -->
         <script src="{{assets}}/js/bootstrap.min.js"></script>
 
-        <!-- require.js -->
-        <script data-main="{{assets}}/js/site" src="{{assets}}/js/require.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="container">
@@ -35,5 +32,15 @@
                 {{> body }}
             </div>
         </div>
+
+        <!-- Custom site scripts -->
+        <script src="{{assets}}/js/site.js"></script>
+
+        <!-- Mako client -->
+        <script data-main="http://localhost:3000/client/mako.min.js" src="http://localhost:3000/client/require.min.js"></script>
+
+        <!--
+        <script src="http://localhost:3000/client/mako.min.js"></script>
+        -->
     </body>
 </html>
