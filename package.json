@@ -45,5 +45,8 @@
     "site generator",
     "site builder",
     "grunt"
-  ]
+  ],
+  "dependencies": {
+    "express": "^4.13.1"
+  }
 }
