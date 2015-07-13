@@ -17,6 +17,7 @@
     "node": ">=0.10"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "grunt assemble"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "assemble-contrib-sitemap": "*",
     "assemble-contrib-toc": "*",
     "grunt": "^0.4.5",
+    "grunt-bower-task": "^0.4.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",

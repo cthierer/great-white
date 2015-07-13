@@ -106,7 +106,19 @@ module.exports = function(grunt) {
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml}'],
+
+    bower: {
+        install: {
+            options: {
+                targetDir: './bower_components',
+                install: true,
+                cleanTargetDir: true,
+                copy: false,
+                verbose: true
+            }
+        }
+    }
 
   });
 
@@ -120,6 +132,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',
+    'bower:install',
     'copy',
     'assemble'
   ]);
